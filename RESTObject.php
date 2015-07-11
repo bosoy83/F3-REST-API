@@ -9,7 +9,7 @@
 		public function __construct() {
 			$this->messages = new stdClass();
 			$this->data = new stdClass();
-			$this->success false;
+			$this->success = false;
 		}
 		
 		public function addMessage($element, $message) {
