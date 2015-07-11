@@ -28,7 +28,7 @@
 			$this->success = $value;
 		}
 
-		public function __toString(){
+		public function __toString() {
 			header('Content-Type: application/json');
 			echo json_encode($this);
 		}
