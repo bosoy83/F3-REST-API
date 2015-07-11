@@ -2,9 +2,10 @@
 	//REST API Helper class
 	class RESTAPI {
 		
-		protected $restObject = new stdClass();
+		protected $restObject;
 		
 		public function __construct() {
+			$this->restObject = new stdClass();
 			$this->restObject->errors = new stdClass();
 			$this->restObject->messages = new stdClass();
 			$this->restObject->data = new stdClass();
