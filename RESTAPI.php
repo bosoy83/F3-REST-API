@@ -2,18 +2,37 @@
 	//REST API Helper class
 	class RESTAPI {
 		
-		public static function getObject() {
-			$jsonObject =  new stdClass();
-			$jsonObject->errors =  new stdClass();
-			$jsonObject->messages =  new stdClass();
-			$jsonObject->data =  new stdClass();
-			$jsonObject->success = false;
-			return $jsonObject;
+		protected $restObject = new stdClass();
+		
+		public function __construct() {
+			$this->restObject->errors = new stdClass();
+			$this->restObject->messages = new stdClass();
+			$this->restObject->data = new stdClass();
+			$this->restObject->success false;
 		}
 		
-		public static function returnJSON($jsonObject) {
-			header('Content-Type: application/json');
-			echo json_encode($jsonObject);
+		public function addMessage($element, $message) {
+			$this->restObject->messages[$element] = $message;
 		}
-	}
+		
+		public function addError($element, $message) {
+			$this->restObject->errors[$element] = $message;
+		}
+		
+		public function addData($element, $value) {
+			$this->restObject->data[$element] = $value;
+		}
+		
+		public function setStatuc($status) {
+			$this->restObject->success = $status;
+		}
+		
+		public function getObject() {
+			return $this->restObject;
+		}
+		
+		public function __toString(){
+			header('Content-Type: application/json');
+			echo json_encode($this->restObject);
+		}
 ?>
