@@ -8,6 +8,7 @@
 		
 		public function __construct() {
 			$this->messages = new stdClass();
+			$this->errrors = new stdClass();
 			$this->data = new stdClass();
 			$this->success = false;
 		}
