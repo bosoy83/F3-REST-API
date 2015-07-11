@@ -1,5 +1,5 @@
 <?php //REST API Helper class
-	class RESTAPI {
+	class RESTObject {
 		
 		protected $messages;
 		protected $errrors;
