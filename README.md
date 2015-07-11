@@ -1,2 +1,2 @@
 # F3-REST-API
-Simple Helper Class to help standardize REST functionality
+Simple Helper Classes to standardize REST functionality
