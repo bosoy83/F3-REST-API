@@ -20,7 +20,7 @@
 			$this->data[$element] = $value;
 		}
 		
-		public function setStatuc($value) {
+		public function setSuccess($value) {
 			$this->success = $value;
 		}
 
