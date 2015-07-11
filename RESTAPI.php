@@ -1,5 +1,4 @@
-<?php
-	//REST API Helper class
+<?php //REST API Helper class
 	class RESTAPI {
 		
 		protected $messages;
