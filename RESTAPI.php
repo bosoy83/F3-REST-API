@@ -3,6 +3,7 @@
 	class RESTAPI {
 		
 		protected $messages;
+		protected $errrors;
 		protected $data;
 		protected $success;
 		
@@ -14,6 +15,10 @@
 		
 		public function addMessage($element, $message) {
 			$this->messages[$element] = $message;
+		}
+		
+		public function addError($element, $message) {
+			$this->errors[$element] = $message;
 		}
 		
 		public function addData($element, $value) {
