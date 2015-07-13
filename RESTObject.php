@@ -25,11 +25,6 @@
 			$this->data[$element] = $value;
 		}
 		
-		public function setData($values) {
-			unset($this->data);
-			$this->data = $values;
-		}
-		
 		public function setSuccess($value) {
 			$this->success = $value;
 		}
